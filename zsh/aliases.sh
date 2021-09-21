@@ -2,6 +2,9 @@
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
+# Neovim
+alias vim="nvim"
+
 # Fancy output
 alias ll="exa -l -g -a --icons"
 

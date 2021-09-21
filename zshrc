@@ -7,11 +7,11 @@ source ~/.zsh/ohmyzsh.sh
 # External settings
 source ~/.zsh/external.sh
 
-# Plugins
-source ~/.zsh/plugins.sh
-
 # OhMyZsh
 source $ZSH/oh-my-zsh.sh
+
+# Plugins
+source ~/.zsh/plugins.sh
 
 # Aliases
 source ~/.zsh/aliases.sh
