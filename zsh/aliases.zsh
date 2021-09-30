@@ -3,10 +3,20 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Neovim
-alias vim="nvim"
+if command -v nvim &>/dev/null; then
+    alias vim="nvim"
+elif command -v vim &>/dev/null; then
+    alias vim="vim"
+else
+    alias vim="vi"
+fi
 
 # Fancy output
-alias ll="exa -l -g -a --icons"
+if command -v exa &>/dev/null; then
+    alias ll="exa -l -g -a --icons"
+else
+    alias ll="ls -lah"
+fi
 
 # Aliases to protect against overwriting
 alias cp='cp -i'

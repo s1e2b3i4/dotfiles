@@ -25,15 +25,6 @@ if [[ "$(tput colors)" == "256" ]]; then
   ZSH_HIGHLIGHT_STYLES[assign]=fg=037
 fi
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# grc
-grc_file=$(brew --prefix)/etc/grc.zsh
-if [ -f "${grc_file}" ]; then
-  source "${grc_file}"
-fi
-
 plugins=(
   git
   zsh-autosuggestions

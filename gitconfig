@@ -21,6 +21,20 @@
 	separator = yellow
 	function = blue
 
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 53
+	newNormal = green bold
+	newHighlight = green bold 23
+
+[color "diff"]
+	commit = magenta
+	meta = yellow
+	frag = cyan
+	old = red
+	new = green
+	whitespace = red reverse
+
 [pretty]
 	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
 	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
@@ -51,6 +65,11 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+
+[pager]
+	# diff-highlight is script provided by git that shows word-by-word diff
+	diff = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+	show = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
 
 [credential]
 	helper = cache --timeout=3600

@@ -41,7 +41,7 @@ CASE_SENSITIVE="false"
 ENABLE_CORRECTION="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/.dotfiles/zsh/custom
+ZSH_CUSTOM="$HOME/.dotfiles/zsh/custom"
 
 #This will add a 10 second wait before you can confirm a wildcard deletion.
 setopt RM_STAR_WAIT
