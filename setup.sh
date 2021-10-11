@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "${SHELL}" != "/bin/zsh" ]; then
+if [[ "${SHELL}" != *"zsh"* ]]; then
     echo "Changing shell to 'zsh'"
     chsh -s "$(which zsh)"
 fi
