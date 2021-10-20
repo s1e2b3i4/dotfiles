@@ -1,6 +1,19 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# General Options
+setopt autocd              # change directory just by typing its name
+setopt correct             # auto correct mistakes
+setopt interactivecomments # allow comments in interactive mode
+setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
+setopt nonomatch           # hide error message if there is no match for the pattern
+setopt notify              # report the status of background jobs immediately
+setopt numericglobsort     # sort filenames numerically when it makes sense
+setopt promptsubst         # enable command substitution in prompt
+
+WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
+
+
 # Initialize completion
 autoload -Uz compinit && compinit -i
 zstyle ':completion:*' menu select
@@ -19,6 +32,8 @@ SAVEHIST=$HISTSIZE
 setopt appendhistory
 setopt incappendhistory
 setopt extendedhistory
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
 HISTCONTROL=ignoredups
 HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
@@ -45,6 +60,8 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh/custom"
 
 #This will add a 10 second wait before you can confirm a wildcard deletion.
 setopt RM_STAR_WAIT
+
+COMPLETION_WAITING_DOTS="true"
 
 # Set 'time' output-format:
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
