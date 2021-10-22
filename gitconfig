@@ -23,9 +23,9 @@
 
 [color "diff-highlight"]
 	oldNormal = red bold
-	oldHighlight = red bold 53
+	oldHighlight = red bold 52
 	newNormal = green bold
-	newHighlight = green bold 23
+	newHighlight = green bold 22
 
 [color "diff"]
 	commit = magenta
@@ -68,8 +68,8 @@
 
 [pager]
 	# diff-highlight is script provided by git that shows word-by-word diff
-	diff = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
-	show = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+	diff = diff-highlight | less
+	show = diff-highlight | less
 
 [credential]
 	helper = cache --timeout=3600

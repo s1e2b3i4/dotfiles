@@ -22,3 +22,4 @@ source ~/.zsh/tools.zsh
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
+

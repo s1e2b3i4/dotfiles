@@ -1,4 +1,5 @@
 # fzf
+# /usr/local/opt/fzf/install --no-fish --no-bash --key-bindings --completion --no-update-rc
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # grc
