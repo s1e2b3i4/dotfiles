@@ -1,5 +1,12 @@
+# Activate bash compatible autocompletion
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Chnage langauge in Terminal to english
+export LANG="en_US.UTF-8"
 
 # General Options
 setopt autocd              # change directory just by typing its name
@@ -81,3 +88,6 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 ### Fix slowness of pastes
+
+# Set keybindings
+bindkey \^U backward-kill-line

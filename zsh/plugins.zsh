@@ -32,4 +32,5 @@ plugins=(
   zsh-syntax-highlighting
   colored-man-pages
   vagrant
+  docker
   )
