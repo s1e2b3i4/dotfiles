@@ -12,6 +12,7 @@
     ~/.config/nvim:
     ~/.zsh:
     ~/.zshrc:
+    ~/.tmux.conf:
 
 - shell:
     - git submodule sync --recursive

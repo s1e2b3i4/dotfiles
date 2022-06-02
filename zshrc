@@ -18,6 +18,9 @@ source ~/.zsh/aliases.zsh
 # Source Oh My Zsh
 source ~/.zsh/tools.zsh
 
+# Source SSH PS1
+source ~/.zsh/ssh_ps1.zsh
+
 # Allow local customizations in the ~/.zshrc_local file
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
