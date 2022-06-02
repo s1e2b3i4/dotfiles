@@ -45,6 +45,7 @@
 
 [rebase]
 	autosquash = true
+	instructionFormat = (%Cblue%an <%ae>) %s
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -72,9 +73,11 @@
 	show = diff-highlight | less
 
 [credential]
-	helper = cache --timeout=3600
+	helper = store
 
 # Allow local customizations in the .gitconfig_local file
 [include]
 	path = ~/.gitconfig_local
 
+[safe]
+	directory = /home/sebi/.dotfiles-local/dotbot
