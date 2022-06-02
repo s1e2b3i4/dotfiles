@@ -6,7 +6,10 @@ if [ -f ~/.fzf.zsh ]; then
 fi
 
 # grc
-grc_file=$(brew --prefix)/etc/grc.zsh
+if command -v brew >/dev/null; then
+  grc_file=$(brew --prefix)/etc/grc.zsh
+fi
+
 if [ -f "${grc_file}" ]; then
   source "${grc_file}"
 fi
