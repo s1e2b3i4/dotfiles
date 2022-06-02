@@ -1,5 +1,7 @@
 [user]
 	useConfigOnly = true
+	email = sebastiantauchert@me.com
+	name = Sebastian Tauchert
 
 [init]
 	defaultBranch = main
@@ -64,13 +66,13 @@
 	waitingForEditor = false
 
 [core]
-	editor = nvim
+	editor = vim
 	excludesfile = ~/.gitignore_global
 
 [pager]
 	# diff-highlight is script provided by git that shows word-by-word diff
-	diff = diff-highlight | less
-	show = diff-highlight | less
+	diff = ~/.dotfiles/diff-highlight | less -r
+	show = ~/.dotfiles/diff-highlight | less -r
 
 [credential]
 	helper = store
