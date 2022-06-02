@@ -20,4 +20,9 @@
     - >
       git clean -fdx
       zsh/custom/plugins/
-    - ./setup.sh
+    - 
+      description: "Setup ZSH as login shell and install OhMyZSH" 
+      command: ./setup.sh
+      stdout: true
+      stderr: true
+      stdin: true
