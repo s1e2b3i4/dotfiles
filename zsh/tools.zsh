@@ -1,6 +1,9 @@
 # fzf
 # /usr/local/opt/fzf/install --no-fish --no-bash --key-bindings --completion --no-update-rc
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+  export FZF_CTRL_R_OPTS="--preview 'echo {} |sed -e \"s/^ *\([0-9]*\) *//\" -e \"s/.\\{\$COLUMNS\\}/&\\n/g\"' --preview-window down:3:hidden --bind ?:toggle-preview"
+fi
 
 # grc
 grc_file=$(brew --prefix)/etc/grc.zsh
